@@ -1,0 +1,43 @@
+<!-- Modal content -->
+<div class="modal-content">
+    <p class="p-0">
+        <span class="modal-close">&times;</span>
+        <span class="h4">Mini-DevBiro &nbsp;</span>
+    </p>
+    <p class="p-0">
+        <select id="" style="border-radius: 8px; padding: 5px 10px;" onchange="">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+        </select>
+    <p>
+    <div class="row m-0 p-0">
+        <div class="col-md p-1 mt-0">
+            <span class="theme-dark m-0" style="width: auto; padding: 5px 15px; border-radius: 8px 8px 0px 0px;">
+                <input type="radio" checked disabled>
+                Script
+            </span>
+            <button type="button" onclick="runScript()" class="theme-dark text-success p-2" style="width: auto; border: none;"><i class="fa fa-play"></i></button>
+            <textarea id="html" class="editor" placeholder="HTML"></textarea>
+        </div>
+        <div class="col-md p-1 mt-0">
+            <span class="theme-dark m-0" style="width: auto; padding: 5px 15px; border-radius: 8px 8px 0px 0px;">
+                <input type="radio" checked disabled>
+                Browser 
+            </span>
+            <script>
+                function searchUrl(){
+                    var searchField = document.getElementById("searchBar");
+                    document.getElementById("browserFrame").src = searchField.value;
+                }
+            </script>
+            <form>
+                <input type="url" id="searchBar" placeholder="Enter URL ..." style="padding: 5px 15px; border-radius: 2px; width: 200px;" id="">
+                <button type="button" onclick="searchUrl()" class="theme-dark theme-text p-2 text-white" style="width: auto; border: none;"><i class="fa fa-arrow-circle-right"></i></button>
+            </form>
+            <iframe id="code" class="editor"></iframe>
+            <script type="text/javascript" src="app.js"></script>
+        </div>
+
+    </div>
+</div>
