@@ -18,8 +18,14 @@
 
 <!-- The Modal -->
 <div id="myModal" class="code-modal theme-text">
+    <!--- START DD -->
 
-<!-- Modal content -->
+<!DOCTYPE html>
+<html>
+  
+  <body>
+  
+    <!-- Modal content -->
 <div class="modal-content">
     <p class="p-0">
         <span class="modal-close">&times;</span>
@@ -39,8 +45,14 @@
                 Script
             </span>
             <button type="button" onclick="runScript()" class="theme-dark text-success p-2" style="width: auto; border: none;"><i class="fa fa-play"></i></button>
-            <textarea class="editor"></textarea>
-        </div>
+
+      <textarea id="html" class="editor" placeholder="HTML"></textarea> 
+    </div>
+  
+    <textarea style="display: none;" id="css" placeholder="CSS"></textarea>
+    <textarea style="display: none;" id="js" placeholder="JavaScript"></textarea>
+     
+    </div>
         <div class="col-md p-1 mt-0">
             <span class="theme-dark m-0" style="width: auto; padding: 5px 15px; border-radius: 8px 8px 0px 0px;">
                 <input type="radio" checked disabled>
@@ -55,12 +67,21 @@
             <form>
                 <input type="url" id="searchBar" placeholder="Enter URL ..." style="padding: 5px 15px; border-radius: 2px; width: 200px;" id="">
                 <button type="button" onclick="searchUrl()" class="theme-dark theme-text p-2 text-white" style="width: auto; border: none;"><i class="fa fa-arrow-circle-right"></i></button>
-            </form>
-            <iframe id="browserFrame" class="editor" src="" frameborder="0"></iframe>
+            </form> 
+
+            <iframe id="code" src="" frameborder="0" class="editor"></iframe>
+            <script type="text/javascript" src="app.js"></script>
         </div>
+
     </div>
 </div>
 
+  </body>
+</html>
+
+
+
+    <!-- END DD -->
 </div>
 
 <script>
