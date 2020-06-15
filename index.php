@@ -25,9 +25,9 @@
 <body>
     <?php
         if ($color_scheme == 'dark') {
-            ?><form method="post"><button type="submit" name="light" class="theme-switch">🌞</button></form><?php
+            ?><form method="post"><button type="submit" name="light" class="theme-switch"><img src="./images/sun.png" style="width: 35px; height: 35px;"></button></form><?php
         } else {
-            ?><form method="post"><button type="submit" name="dark" class="theme-switch">🌛</button></form><?php
+            ?><form method="post"><button type="submit" name="dark" class="theme-switch"><img src="./images/moon.png" style="width: 35px; height: 35px;"></button></form><?php
         }
         if (isset($_POST['light'])) {
             setcookie("color_scheme", "light", strtotime( '+1 year' ));
