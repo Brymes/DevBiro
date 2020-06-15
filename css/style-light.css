@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+}
+.theme-text {
+  color: #000;
+}
+.theme-line {
+  background: dodgerblue;
+}
+.theme-dark {
+  background: rgba(000, 000, 000, 0.2);
+}
+.plasta-cover {
+  background: rgba(255, 255, 255, 0.7);
+}
+.code-modal {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+.modal-content {
+  background: #fff;
+}
+.modal-close:hover,
+.modal-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+textarea.editor {
+  background: #ccc;
+  color: #000;
+}
+
+#my-codeBtn {
+  background: #fff;
+  border: 1.5px solid #2c2c2c;
+  margin: auto;
+}
+
+#my-logBtn {
+  background: lightskyblue;
+  border: 1.5px solid #ccc;
+  margin: auto;
+}
