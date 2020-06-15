@@ -25,21 +25,46 @@
         <span class="modal-close">&times;</span>
         <span class="h4">Mini-DevBiro &nbsp;</span>
     </p>
-    <p class="p-0">
-        <select id="" style="border-radius: 8px; padding: 5px 10px;" onchange="">
-            <option value="html">HTML</option>
-            <option value="css">CSS</option>
-            <option value="js">JavaScript</option>
-        </select>
-    <p>
     <div class="row m-0 p-0">
         <div class="col-md p-1 mt-0">
-            <span class="theme-dark m-0" style="width: auto; padding: 5px 15px; border-radius: 8px 8px 0px 0px;">
+            <button class="theme-dark m-0 tablinks" onclick="openTab(event, 'html')" style="width: auto; padding: 5px 15px; border-radius: 8px 8px 0px 0px;">
                 <input type="radio" checked disabled>
-                Script
-            </span>
+                HTML
+            </button>&nbsp;
+            <button class="theme-dark m-0 tablinks" onclick="openTab(event, 'css')" style="width: auto; padding: 5px 15px; border-radius: 8px 8px 0px 0px;">
+                <input type="radio" checked disabled>
+                CSS
+            </button>&nbsp;
+            <button class="theme-dark m-0 tablinks" onclick="openTab(event, 'js')" style="width: auto; padding: 5px 15px; border-radius: 8px 8px 0px 0px;">
+                <input type="radio" checked disabled>
+                JS
+            </button>&nbsp;
             <button type="button" onclick="runScript()" class="theme-dark text-success p-2" style="width: auto; border: none;"><i class="fa fa-play"></i></button>
-            <textarea class="editor"></textarea>
+            <textarea class="editor tabcontent" id="html">HTML</textarea>
+            <textarea class="editor tabcontent" id="css">CSS</textarea>
+            <textarea class="editor tabcontent" id="js">JavaScript</textarea>
+            <script>
+                function openTab(evt, tabName) {
+                    // Declare all variables
+                    var i, tabcontent, tablinks;
+
+                    // Get all elements with class="tabcontent" and hide them
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+
+                    // Get all elements with class="tablinks" and remove the class "active"
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tablinks[i].classList.remove("active");
+                    }
+
+                    // Show the current tab, and add an "active" class to the link that opened the tab
+                    document.getElementById(tabName).style.display = "block";
+                    evt.currentTarget.classList.add("active");
+                }
+            </script>
         </div>
         <div class="col-md p-1 mt-0">
             <span class="theme-dark m-0" style="width: auto; padding: 5px 15px; border-radius: 8px 8px 0px 0px;">

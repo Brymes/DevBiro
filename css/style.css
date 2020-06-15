@@ -48,6 +48,17 @@
   border: 1px solid #888;
   width: 80%;
 }
+/* Change background color of links on hover */
+.tablinks:hover {background-color: rgb(138, 137, 137);}
+
+/* Create an active/current tablink class */
+.active {background-color: #ccc;}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+}
+
 #my-codeBtn {
   margin: auto;
 }
