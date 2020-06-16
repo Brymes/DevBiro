@@ -1,4 +1,23 @@
-
+<?php
+    $htmlSyntax = "
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>"
+        // <link rel=\"stylesheet\" href=\"\">
+   ."
+    </head>
+    <body>
+        
+    </body>
+</html>
+";
+    $cssSyntax = "
+* {
+    box-sizing: border-box;
+}
+";
+?>
 <div class="plasta pt-3 pb-3">
 <div class="plasta-cover pb-3">
     
@@ -27,22 +46,22 @@
     </p>
     <div class="row m-0 p-0">
         <div class="col-md p-1 mt-0">
-            <button class="theme-dark m-0 tablinks" onclick="openTab(event, 'html')" style="width: auto; padding: 5px 15px; border-radius: 8px 8px 0px 0px;">
+            <button class="theme-dark m-0 tablinks" onclick="openTab(event, 'html')" style="width: 120px; padding: 5px 15px; border-radius: 8px 8px 0px 0px;">
                 <input type="radio" checked disabled>
                 HTML
             </button>&nbsp;
-            <button class="theme-dark m-0 tablinks" onclick="openTab(event, 'css')" style="width: auto; padding: 5px 15px; border-radius: 8px 8px 0px 0px;">
+            <button class="theme-dark m-0 tablinks" onclick="openTab(event, 'css')" style="width: 120px; padding: 5px 15px; border-radius: 8px 8px 0px 0px;">
                 <input type="radio" checked disabled>
                 CSS
             </button>&nbsp;
-            <button class="theme-dark m-0 tablinks" onclick="openTab(event, 'js')" style="width: auto; padding: 5px 15px; border-radius: 8px 8px 0px 0px;">
+            <button class="theme-dark m-0 tablinks" onclick="openTab(event, 'js')" style="width: 120px; padding: 5px 15px; border-radius: 8px 8px 0px 0px;">
                 <input type="radio" checked disabled>
                 JS
             </button>&nbsp;
             <button type="button" onclick="runScript()" class="theme-dark text-success p-2" style="width: auto; border: none;"><i class="fa fa-play"></i></button>
-            <textarea class="editor tabcontent" id="html">HTML</textarea>
-            <textarea class="editor tabcontent" id="css">CSS</textarea>
-            <textarea class="editor tabcontent" id="js">JavaScript</textarea>
+            <textarea class="editor tabcontent" id="html" style="display: block;" placeholder="<!-- HTML code goes here -->"><?php echo($htmlSyntax);?></textarea>
+            <textarea class="editor tabcontent" id="css" placeholder="/* CSS styling goes here */"><?php echo($cssSyntax);?></textarea>
+            <textarea class="editor tabcontent" id="js" placeholder="// JavaScript code goes here"></textarea>
             <script>
                 function openTab(evt, tabName) {
                     // Declare all variables
@@ -67,21 +86,23 @@
             </script>
         </div>
         <div class="col-md p-1 mt-0">
-            <span class="theme-dark m-0" style="width: auto; padding: 5px 15px; border-radius: 8px 8px 0px 0px;">
+            <button class="theme-dark m-0 tablinks" style="width: 120; padding: 5px 15px; border-radius: 8px 8px 0px 0px;">
                 <input type="radio" checked disabled>
                 Browser 
-            </span>
-            <script>
+            </button>
+            <!-- <script>
                 function searchUrl(){
                     var searchField = document.getElementById("searchBar");
-                    document.getElementById("browserFrame").src = searchField.value;
+                    document.getElementById("code").src = searchField.value;
                 }
             </script>
             <form>
                 <input type="url" id="searchBar" placeholder="Enter URL ..." style="padding: 5px 15px; border-radius: 2px; width: 200px;" id="">
                 <button type="button" onclick="searchUrl()" class="theme-dark theme-text p-2 text-white" style="width: auto; border: none;"><i class="fa fa-arrow-circle-right"></i></button>
-            </form>
-            <iframe id="browserFrame" class="editor" src="" frameborder="0"></iframe>
+            </form> -->
+
+            <iframe id="code" src="" frameborder="0" class="editor" style="background: #fff;"></iframe>
+            <script type="text/javascript" src="app.js"></script>
         </div>
     </div>
 </div>
@@ -115,9 +136,9 @@ modal.style.display = "none";
 //   }
 // }
 </script>
-<p class="h5 theme-text m-4 mb-1">Do complex coding, on a verified account:  &nbsp;
+<p class="h5 theme-text m-4 mb-1">Do complex coding, on a verified account  &nbsp;
 <!-- Trigger/Open The Modal -->
-<button class="btn-lg theme-text" id="my-logBtn">Auth Coding</button>
+<!-- <button class="btn-lg theme-text" id="my-logBtn">Auth Coding</button> -->
 </p>
 
 <!-- The Modal -->
@@ -193,27 +214,20 @@ loGmodal.style.display = "none";
 // }
 </script>
 <p class="text-center" style="max-width: 95%; max-height: 80%;">
-    <video onclick="playPause()" muted id="myVideo" style="margin-bottom: -140px; position: static; z-index: -10; max-width: 95%; max-height: 80%; border-radius: 8px;" loop>
-        <source src="images/greathack.mp4" type="video/mp4">
+    <video onclick="playPause()" muted id="myVideo" style="position: static; z-index: 1; margin: auto; max-width: 70%; max-height: 80%; border-radius: 8px;" loop>
+        <source src="images/intro.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
-    <div onclick="playPause()" class="h1 theme-text text-center" style="height 90px; min-width:40%; width: auto; max-width: 80%; margin:auto; margin-bottom: 100px; opacity: 0.7; position: relative: z-index: 100;"><i class="fa fa-play" id="myplay"></i><i class="fa fa-pause" id="mypause"></i></div>
     <script> 
         var myVideo = document.getElementById("myVideo"); 
-        var play = document.getElementById("myplay"); 
-        var pause = document.getElementById("mypause"); 
 
         function playPause() { 
             
             if (myVideo.paused) {
                 myVideo.play(); 
-                pause.style.display = "block";
-                play.style.display = "none";
             }
             else {
                 myVideo.pause(); 
-                pause.style.display = "none";
-                play.style.display = "block";
             } 
         }
         setTimeout(playPause(), 3000);

@@ -49,20 +49,24 @@
   width: 80%;
 }
 /* Change background color of links on hover */
-.tablinks:hover {background-color: rgb(138, 137, 137);}
+.tablinks:hover {
+  background-color: rgb(138, 137, 137);
+}
 
 /* Create an active/current tablink class */
-.active {background-color: #ccc;}
+.active {
+  background-color: #ccc;
+}
 
 /* Style the tab content */
 .tabcontent {
-    display: none;
+  display: none;
 }
 
 #my-codeBtn {
   margin: auto;
 }
-}
+
 #my-logBtn {
   margin: auto;
 }
@@ -73,8 +77,8 @@
   width: 100%;
   margin: auto;
 }
-.theme-input{
-    width: 80%;
+.theme-input {
+  width: 80%;
 }
 /* The Close Button */
 .modal-close {
